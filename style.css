@@ -6,8 +6,8 @@
 }
 
 body {
-  scroll-behavior: smooth;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 button {
@@ -182,8 +182,8 @@ header span {
   display: flex;
   align-items: center;
   column-gap: 50px;
+  overflow: hidden;
   animation: marquee 20s linear infinite;
-  overflow-x: hidden;
 }
 
 /*key fraames for logos*/
@@ -263,7 +263,7 @@ header span {
 }
 
 #casual-images img {
-  height: 300px;
+  height: 80%;
   width: 200px;
   object-fit: cover;
 }
@@ -518,7 +518,7 @@ footer ul li a {
 
   /*hero-section*/
   #hero-section #hero-contents h1 {
-    width: 300px;
+    width: 80%;
     font-size: 30px;
   }
 
@@ -533,19 +533,15 @@ footer ul li a {
   }
 
   #hero-section {
-    background-position: center;
     background-size: cover;
+    background-position: center;
   }
 
   /*brands-section*/
 
-  #brands-section {
-    background-position: center;
-    background-size: cover;
-  }
-
   #brands-section #brands-contents h1 {
     font-size: 30px;
+  
   }
 
   #brands-contents p {
@@ -553,13 +549,19 @@ footer ul li a {
     line-height: 1.6;
   }
 
+  
+
+  
+
   /*key fraames for logos*/
   @keyframes marquee {
     from {
       transform: translateX(100%);
+      
     }
     to {
       transform: translateX(-100%);
+      
     }
   }
 
