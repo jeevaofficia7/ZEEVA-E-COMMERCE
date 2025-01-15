@@ -6,8 +6,8 @@
 }
 
 body {
-  overflow-x: hidden;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 button {
@@ -182,8 +182,8 @@ header span {
   display: flex;
   align-items: center;
   column-gap: 50px;
-  overflow: hidden;
   animation: marquee 20s linear infinite;
+  overflow-x: hidden;
 }
 
 /*key fraames for logos*/
@@ -263,7 +263,7 @@ header span {
 }
 
 #casual-images img {
-  height: 80%;
+  height: 300px;
   width: 200px;
   object-fit: cover;
 }
@@ -534,12 +534,18 @@ footer ul li a {
 
   #hero-section {
     background-position: center;
+    background-size: cover;
   }
 
   /*brands-section*/
 
+  #brands-section {
+    background-position: center;
+    background-size: cover;
+  }
+
   #brands-section #brands-contents h1 {
-    font-size: 50px;
+    font-size: 30px;
   }
 
   #brands-contents p {
@@ -547,29 +553,13 @@ footer ul li a {
     line-height: 1.6;
   }
 
-  
-  #brands-section #brand-logos figure {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow items to wrap within the container */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Align items vertically */
-    gap: 10px; /* Add spacing between items */
-    overflow: hidden; /* Prevent horizontal scrolling */
-    padding: 10px; /* Add some padding for better spacing */
-  }
-  
-
   /*key fraames for logos*/
-
   @keyframes marquee {
     from {
       transform: translateX(100%);
-      overflow-x: hidden;
     }
-
     to {
       transform: translateX(-100%);
-      overflow-x: hidden;
     }
   }
 
