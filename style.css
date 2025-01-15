@@ -1,0 +1,604 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+button {
+  background-color: #292929;
+  border-radius: 5px;
+  color: white;
+}
+
+/*hamburger*/
+
+#hamburger {
+  display: none;
+}
+
+#hamburger .lines {
+  height: 3px;
+  width: 30px;
+  display: block;
+  background-color: orange;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+
+img {
+  cursor: pointer;
+}
+img:hover {
+  scale: 1.05;
+  transition: all 0.5s linear;
+}
+
+.fa-search {
+  color: black;
+}
+
+/*style for header*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background-color: #222;
+  color: white;
+  position: sticky;
+  font-weight: 500;
+  top: 0;
+  z-index: 10;
+}
+/*style for navlinks or ul*/
+header #navlinks {
+  list-style-type: none;
+  display: flex;
+  column-gap: 40px;
+  align-items: center;
+}
+
+header #navlinks li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+header button {
+  padding: 10px 15px;
+  border: none;
+  background-color: orange;
+  color: white;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+/*style for search container*/
+#search-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+#search-container input {
+  padding: 7px 12px;
+  border: none;
+  outline: none;
+  width: 200px;
+}
+
+.fa-search {
+  position: absolute;
+  right: 10px;
+}
+
+header span {
+  color: orange;
+}
+
+/*style for hero section*/
+
+#hero-section {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(images/model7.jpg);
+  background-size: cover;
+  background-position: left;
+  height: 100vh;
+  width: 100%;
+  color: white;
+}
+
+#hero-section #hero-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 20px;
+  padding: 150px 10%;
+}
+
+#hero-section #hero-contents h1 {
+  font-size: 45px;
+  max-width: 40%;
+  line-height: 1.5;
+}
+
+#hero-section #hero-contents button {
+  border: none;
+  padding: 15px;
+  background-color: orange;
+  color: white;
+}
+
+#hero-section #content-buttons {
+  display: flex;
+  column-gap: 20px;
+}
+
+/*logo section*/
+
+#brands-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 60px;
+  margin: 50px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(images/model11.jpg);
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  padding: 50px;
+}
+
+#brands-section #brands-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+#brands-section #brands-contents h1 {
+  font-size: 30px;
+  color: white;
+}
+#brands-section #brands-contents p {
+  color: lightgoldenrodyellow;
+}
+
+#brands-section #brand-logos figure img {
+  height: 100%;
+  width: 150px;
+  object-fit: cover;
+}
+
+#brand-logos figure {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  overflow: hidden;
+  animation: marquee 20s linear infinite;
+}
+
+/*key fraames for logos*/
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/*style for  fashion section*/
+#fashion-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 60px;
+}
+
+#fashion-section #fashion-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+#fashion-content h1 {
+  font-size: 30px;
+}
+
+#fashion-content p {
+  color: darkslategrey;
+}
+
+/*fashion images*/
+#fashion-images img {
+  height: 80%;
+  width: 300px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+#fashion-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+  column-gap: 50px;
+}
+
+/*style for casual top wear*/
+
+#casual-section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 100px;
+  margin: 80px 0;
+  padding: 0 7%;
+}
+
+#casual-section #casual-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 20px;
+}
+
+#casual-section #casual-contents h1 {
+  font-size: 35px;
+}
+
+#casual-contents button {
+  padding: 15px 20px;
+  border: none;
+}
+
+#casual-images img {
+  height: 80%;
+  width: 200px;
+  object-fit: cover;
+}
+
+#casual-images {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-evenly;
+  column-gap: 120px;
+  overflow-x: auto;
+}
+
+#casual-images article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  padding: 20px 0;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+#casual-images article button {
+  padding: 15px 20px;
+  border: none;
+}
+
+/*bottom-wear section*/
+#bottom-wear {
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+  padding: 0 7%;
+}
+
+#bottomwear-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 20px;
+}
+
+#bottomwear-contents h1 {
+  font-size: 35px;
+}
+
+#bottomwear-contents button {
+  padding: 15px 20px;
+  border: none;
+}
+
+#bottomwear-container img {
+  height: 90%;
+  width: 300px;
+  object-fit: cover;
+}
+
+#bottomwear-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-evenly;
+  column-gap: 50px;
+  overflow-x: scroll;
+}
+
+/*footwear section*/
+
+#footwear {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 60px;
+  margin: 50px 0;
+  padding: 0 7%;
+}
+
+#footwear-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 20px;
+}
+
+#footwear-contents h1 {
+  font-size: 35px;
+}
+
+#footwear-contents button {
+  padding: 15px 20px;
+  border: none;
+}
+
+#footwear-container article img {
+  height: 250px;
+  width: 300px;
+  object-fit: cover;
+}
+
+#footwear-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-evenly;
+  justify-items: center;
+  width: 100%;
+  align-items: center;
+  column-gap: 20px;
+  overflow-x: scroll;
+}
+
+#footwear-container article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  padding: 20px 0;
+  font-weight: 500;
+}
+
+#footwear-container article button {
+  padding: 10px 12px;
+  border: none;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 200px;
+  background-color: black;
+  color: white;
+  padding: 50px 0;
+  position: relative;
+}
+
+footer ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 10px;
+  padding: 30px 0;
+  font-size: 14px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+#social-links ul {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  font-size: 20px;
+}
+
+#social-links ul li i {
+  background-color: white;
+  padding: 5px;
+  border-radius: 50px;
+}
+
+/*individuals styling social.icons*/
+
+.fa-facebook {
+  color: deepskyblue;
+}
+.fa-whatsapp {
+  color: limegreen;
+}
+
+.fa-instagram {
+  color: deeppink;
+}
+
+.fa-twitter {
+  color: dodgerblue;
+}
+
+/*copyright*/
+#copyright {
+  position: absolute;
+  right: 30%;
+  transform: translate(-50%);
+  bottom: 20px;
+  font-size: 13px;
+}
+
+/*media queries*/
+@media screen and (max-width: 600px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    top: 0;
+    column-gap: 20px;
+    row-gap: 20px;
+    height: 100px;
+    margin-bottom: 300px;
+  }
+
+  #hamburger {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+
+  header button {
+    display: none;
+  }
+
+  header #navlinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    padding: 30px 0;
+    position: absolute;
+    left: -240px;
+    top: 100px;
+  }
+
+  header #navlinks li a {
+    color: black;
+  }
+
+  #search-container {
+    position: absolute;
+    top: 60px;
+  }
+
+  /*hamburger js*/
+  #navlinks.active-hamburger {
+    left: 20px;
+    transition: left 0.5s linear;
+  }
+
+  #logo-container {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  /*hero-section*/
+  #hero-section #hero-contents h1 {
+    width: 300px;
+    font-size: 30px;
+  }
+
+  #hero-section #hero-contents p {
+    width: 60%;
+    line-height: 1.6;
+    font-size: 20px;
+  }
+
+  #hero-section #hero-contents button {
+    padding: 10px;
+  }
+
+  #hero-section {
+    background-position: center;
+  }
+
+  /*brands-section*/
+
+  #brands-section #brands-contents h1 {
+    font-size: 50px;
+  }
+
+  #brands-contents p {
+    width: 70%;
+    line-height: 1.6;
+  }
+
+  #brands-section #brand-logos figure img {
+    height: 100%;
+    width: 120px;
+  }
+
+  #fashion-images {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 30px;
+  }
+
+  #casual-images {
+    column-gap: 10px;
+  }
+
+  #bottomwear-container {
+    column-gap: 10px;
+  }
+
+  #bottomwear-container img {
+    height: 300px;
+    width: 200px;
+  }
+
+  #footwear-container {
+    column-gap: 20px;
+  }
+
+  #footwear-container article img {
+    height: 300px;
+    width: 400px;
+  }
+
+  /*footer section*/
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    width: 100%;
+    height: 400px;
+  }
+
+  footer ul {
+    font-size: 15px;
+  }
+
+  #social-links {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 150px;
+  }
+
+  #copyright {
+    text-align: center;
+    width: 100vw;
+  }
+}
