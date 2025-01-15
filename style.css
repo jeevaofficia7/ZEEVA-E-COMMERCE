@@ -456,6 +456,12 @@ footer ul li a {
 
 /*media queries*/
 @media screen and (max-width: 600px) {
+
+ body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+  
   header {
     display: flex;
     flex-direction: column;
