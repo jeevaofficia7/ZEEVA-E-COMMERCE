@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  
 }
 
 body {
@@ -457,12 +456,16 @@ footer ul li a {
 
 /*media queries*/
 @media screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
   header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    position: sticky;
-    top: 0;
+    position: relative;
     column-gap: 20px;
     row-gap: 20px;
     height: 100px;
@@ -544,28 +547,31 @@ footer ul li a {
     line-height: 1.6;
   }
 
-  #brands-section #brand-logos figure{
-    overflow-x: hidden;
-    width: 100%;
+  
+  #brands-section #brand-logos figure {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap within the container */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Add spacing between items */
+    overflow: hidden; /* Prevent horizontal scrolling */
+    padding: 10px; /* Add some padding for better spacing */
   }
-
-  #brands-section #brand-logos figure img {
-    height: 100%;
-    width: 120px;
-    object-fit: cover;
-  }
+  
 
   /*key fraames for logos*/
 
-@keyframes marquee {
-  from {
-    transform: translateX(10%);
-  }
+  @keyframes marquee {
+    from {
+      transform: translateX(100%);
+      overflow-x: hidden;
+    }
 
-  to {
-    transform: translateX(-10%);
+    to {
+      transform: translateX(-100%);
+      overflow-x: hidden;
+    }
   }
-}
 
   #fashion-images {
     display: grid;
@@ -574,7 +580,10 @@ footer ul li a {
   }
 
   #casual-images {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     column-gap: 10px;
+    align-items: start;
   }
 
   #bottomwear-container {
@@ -617,6 +626,4 @@ footer ul li a {
     position: relative;
     left: 150px;
   }
-
-  
 }
