@@ -110,7 +110,7 @@ header span {
     url(images/model7.jpg);
   background-size: cover;
   background-position: left;
-  height: 100vh;
+  max-height: 100vh;
   width: 100%;
   color: white;
 }
@@ -456,28 +456,12 @@ footer ul li a {
 
 /*media queries*/
 @media screen and (max-width: 600px) {
-  body {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-  }
-
   header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    column-gap: 20px;
-    row-gap: 20px;
+    display: grid;
+    grid-template-rows: repeat(4, 70px);
     height: 100px;
-    margin-bottom: 300px;
-    z-index: 15;
-  }
-
-  #hamburger {
-    display: block;
-    position: absolute;
-    left: 20px;
-    top: 20px;
+    position: sticky;
+    top: 0;
   }
 
   header button {
@@ -485,101 +469,90 @@ footer ul li a {
   }
 
   header #navlinks {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 30px;
-    padding: 30px 0;
+    display: none;
+  }
+
+  #navlinks.active-ul {
+    left: 30px;
+    transition: left 0.5s ease-in-out;
+  }
+
+  #hamburger {
+    display: block;
     position: absolute;
-    left: -240px;
-    top: 100px;
-  }
-
-  header #navlinks li a {
-    color: black;
-  }
-
-  #search-container {
-    position: absolute;
-    top: 60px;
-  }
-
-  /*hamburger js*/
-  #navlinks.active-hamburger {
-    left: 20px;
-    transition: left 0.5s linear;
+    left: 35px;
+    top: 20px;
   }
 
   #logo-container {
     position: absolute;
-    right: 20px;
-    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    top: 10px;
   }
 
-  /*hero-section*/
+  #search-container {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  #hero-section {
+    background-position: center;
+    background-size: cover;
+    max-height: 100%;
+  }
+
   #hero-section #hero-contents h1 {
-    width: 80%;
-    font-size: 30px;
+    font-size: 40px;
+    max-width: 50%;
   }
 
   #hero-section #hero-contents p {
-    width: 60%;
-    line-height: 1.6;
-    font-size: 20px;
+    max-width: 60%;
   }
 
   #hero-section #hero-contents button {
     padding: 10px;
   }
 
-  #hero-section {
-    background-size: cover;
-    background-position: center;
-  }
-
-  /*brands-section*/
-
   #brands-section #brands-contents h1 {
     font-size: 30px;
-  
+  }
+
+  #brands-section #brand-logos figure {
+    flex-wrap: wrap;
   }
 
   #brands-contents p {
-    width: 70%;
+    max-width: 70%;
     line-height: 1.6;
   }
 
-  
+  #fashion-content h1 {
+    font-size: 20px;
+  }
 
-  
-
-  /*key fraames for logos*/
-  @keyframes marquee {
-    from {
-      transform: translateX(100%);
-      
-    }
-    to {
-      transform: translateX(-100%);
-      
-    }
+  #fashion-content p {
+    font-size: 12px;
   }
 
   #fashion-images {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    row-gap: 30px;
   }
 
   #casual-images {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-evenly;
     column-gap: 10px;
-    align-items: start;
   }
 
   #bottomwear-container {
-    column-gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
   }
 
   #bottomwear-container img {
@@ -588,34 +561,25 @@ footer ul li a {
   }
 
   #footwear-container {
-    column-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 
-  #footwear-container article img {
-    height: 300px;
-    width: 400px;
-  }
-
-  /*footer section*/
   footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     position: relative;
     width: 100%;
-    height: 400px;
-    display: none;
-  }
-
-  footer ul {
-    font-size: 15px;
   }
 
   #social-links {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     position: relative;
-    left: 150px;
+    left: 50px;
+  }
+
+  #copyright {
+    position: absolute;
+    left: 80%;
+    width: 100%;
   }
 }
